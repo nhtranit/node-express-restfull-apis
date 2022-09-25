@@ -1,0 +1,17 @@
+Javascript : Single Thread (Đơn luồng) LIFO(Last In First Out)
+
+chạy trình tự
+function demo(){
+    alert(1);
+    console.log(2);// only run after done exec line above
+}
+
+Event loop là cơ chế giúp Javascript có thể thực hiện nhiều thao tác cùng một lúc (concurrency)
+
+https://images.viblo.asia/2b46af9a-6e8f-4e5f-a88c-4aa0c25e4e95.png
+
+
+Khái niệm
+* CallBack: function truyền vào function khác dưới dạng parameter
+* Promise: Đối tượng xử lý bất đồng bộ (ES5)
+

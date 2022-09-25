@@ -1,0 +1,15 @@
+Hateoas là gì?
+
+Hypermedia as the Engine of Application State (HATEOAS)
+là một trong những chuẩn được khuyến nghị cho RESTful API
+
+* HATEOAS mong muốn phía client không cần biết chút nào về cấu trúc server
+* client chỉ cần request một url duy nhất, rồi từ đó mọi đường đi nước bước tiếp
+* theo do chỉ dẫn của phía server trả về
+
+
+example: Github : https://api.github.com
+@GET /articles : lấy danh sách thông tin tất cả các article.
+@GET /articles/1 : lấy thông tin một article có id=1
+@GET /articles/1/comments : lấy danh sách comment của một article có id=1
+@GET /articles/1/tags: lấy danh sách tag của một article có id=1
