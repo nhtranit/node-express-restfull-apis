@@ -7,11 +7,25 @@ function demo(){
 }
 
 Event loop là cơ chế giúp Javascript có thể thực hiện nhiều thao tác cùng một lúc (concurrency)
+work bằng cách nào ?
+Javascript work theo kiểu đơn luồng => mỗi thực hiện duy nhất 1 tác vụ
 
-https://images.viblo.asia/2b46af9a-6e8f-4e5f-a88c-4aa0c25e4e95.png
+** Trình duyệt cung cấp chức năng là WEB APIs + AJAX(Anonymous Javascript And XML) + Event + Timing( setTimeout, setInterval) ...
+** => hỗ trợ những tác vụ chạy bất đồng bộ, non-blocking
+
+** HEAP: nơi lưu value của tác vụ đang chạy
+** STACK: Nơi các tác vụ được exec (LIFO) | (tác vụ liên quan WEB APIs => đẩy vào WEB API để xử lý)
+** QUEUE: Khi mà các WEB API thực hiện xong thì các tác vụ được đẩy xuống đây để đợi (FIFO)
+
+***=> Event Loops : => sinh ra để đồng bộ các tác vụ từ QUEUE sang cho STACK để thực hiện. (watch stack if it empty will pop function 
+*** => from QUEUE to STACK to exec)
+
+
 
 
 Khái niệm
 * CallBack: function truyền vào function khác dưới dạng parameter
 * Promise: Đối tượng xử lý bất đồng bộ (ES5)
 
+
+** Reference: https://viblo.asia/p/hieu-ve-co-che-xu-ly-su-kien-event-loop-trong-javascript-07LKXjX2lV4
